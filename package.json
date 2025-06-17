@@ -1,0 +1,19 @@
+{
+  "name": "court-finder",
+  "version": "1.0.0",
+  "description": "A web app A web app specialized to find sports courts near you with your needs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Unredix/court-finder.git"
+  },
+  "author": "Unredix",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Unredix/court-finder/issues"
+  },
+  "homepage": "https://github.com/Unredix/court-finder#readme"
+}
