@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/Unredix/court-finder/issues"
   },
-  "homepage": "https://github.com/Unredix/court-finder#readme"
+  "homepage": "https://github.com/Unredix/court-finder#readme",
+  "dependencies": {
+    "animejs": "^4.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongodb": "^6.17.0",
+    "mongoose": "^8.16.0"
+  }
 }
