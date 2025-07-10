@@ -11,7 +11,6 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Connect to the database and start the server only after successful connection
 (async () => {
   await connectDB();
   app.use("/api", routes);

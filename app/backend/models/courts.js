@@ -15,6 +15,10 @@ const courtSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    numofCourts: {
+      type: Number,
+      required: true,
+    },
     availableTimes: {
       type: [String], // Array of time slots in HH:MM format
       required: true,

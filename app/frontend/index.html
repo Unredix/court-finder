@@ -4,31 +4,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
   </head>
   <body>
     <header>
-      <ul id="logo">
-        <li>
-          <a href=""
-            ><img
-              src="assets/imgs/court-finder-high-resolution-logo-transparent.png"
-              alt=""
-          /></a>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <a href="">Search</a>
-        </li>
-        <li>
-          <a href="">Map</a>
-        </li>
-        <li>
-          <a href="">About</a>
-        </li>
-      </ul>
+      <nav class="main-nav">
+        <ul>
+          <li>
+            <img src="/assets/imgs/logo.png" alt="" />
+          </li>
+          <li>
+            <a href="">Search</a>
+          </li>
+          <li>
+            <a href="">Map</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="secondary-nav">
+        <ul>
+          <li>
+            <a href="">The goal</a>
+          </li>
+          <li>
+            <a href="">Contact</a>
+          </li>
+          <li>
+            <select name="lang" id="">
+              <option value="en">🇬🇧</option>
+              <option value="hu">🇭🇺</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
     </header>
+    <main>
+      <section class="hero">
+        <h1>Find <span class="hl-hero-text">your</span> court</h1>
+        <p>
+          Find the court that suits your needs. Whether you're looking for a
+          basketball court, tennis court, or any other type of court, we've got
+          you covered.
+        </p>
+        <button>Get started</button>
+        <div class="img-container">
+          <img src="/assets/imgs/tennis.png" class="floating-img img1" />
+          <img src="/assets/imgs/basketball.png" class="floating-img img2" />
+          <img src="/assets/imgs/volleyball.png" class="floating-img img3" />
+        </div>
+      </section>
+      <section class="search-option">
+        <div class="search-option-container">
+          <div class="search-option-item">
+            <img src="/assets/imgs/search.png" alt="" />
+            <h2>Search</h2>
+            <p>
+              Use our search feature to find courts based on your preferences.
+            </p>
+          </div>
+          <div class="search-option-item">
+            <img src="/assets/imgs/map.png" alt="" />
+            <h2>Map</h2>
+            <p>Explore courts on the map and find the nearest one to you.</p>
+          </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script type="module" src="/anim.js"></script>
   </body>
-  <script src="main.js"></script>
 </html>
