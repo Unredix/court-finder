@@ -13,20 +13,20 @@
           <li>
             <img src="/assets/imgs/logo.png" alt="" />
           </li>
-          <li>
+          <li class="anim-link">
             <a href="">Search</a>
           </li>
-          <li>
+          <li class="anim-link">
             <a href="">Map</a>
           </li>
         </ul>
       </nav>
       <nav class="secondary-nav">
         <ul>
-          <li>
+          <li class="anim-link">
             <a href="">The goal</a>
           </li>
-          <li>
+          <li class="anim-link">
             <a href="">Contact</a>
           </li>
           <li>
@@ -39,7 +39,7 @@
       </nav>
     </header>
     <main>
-      <section class="hero">
+      <section class="hero snap">
         <h1>Find <span class="hl-hero-text">your</span> court</h1>
         <p>
           Find the court that suits your needs. Whether you're looking for a
@@ -53,21 +53,67 @@
           <img src="/assets/imgs/volleyball.png" class="floating-img img3" />
         </div>
       </section>
-      <section class="search-option">
+      <section class="search-option snap">
+        <h1>Choose your way</h1>
         <div class="search-option-container">
-          <div class="search-option-item">
-            <img src="/assets/imgs/search.png" alt="" />
+          
+          <div class="search-option-item" id="search-option-item-1">
+            <img src="/assets/imgs/search.png" alt="" class="search-img"/>
             <h2>Search</h2>
             <p>
               Use our search feature to find courts based on your preferences.
             </p>
           </div>
-          <div class="search-option-item">
-            <img src="/assets/imgs/map.png" alt="" />
+          <div class="search-option-item" id="search-option-item-2">
+            <img src="/assets/imgs/globe.png" alt="" />
             <h2>Map</h2>
             <p>Explore courts on the map and find the nearest one to you.</p>
           </div>
       </section>
+      <section class="review snap">
+        <h1>Review courts</h1>
+        <p>
+          Share your experiences and help others find the best courts by leaving
+          reviews.
+        </p>
+        <div class="review-example">
+          <div class="review-item">
+            <div class="review-head">
+              <img src="/assets/imgs/profile-two.png" alt="" />
+              <h2>John Doe</h2>
+            </div>
+            <div class="review-text"> 
+              <p>
+                "Great court! The surface is perfect for basketball and the
+                location is convenient."
+              </p>
+            </div>
+          </div>
+          <div class="review-item">
+            <div class="review-head">
+              <img src="/assets/imgs/profile-one.png" alt="" />
+              <h2>Jane Smith</h2>
+            </div>
+            <div class="review-text">
+              
+              <p>
+                "I love this tennis court! It's well-maintained and has a nice
+                atmosphere."
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <!-- <section class="make-a-court snap">
+        <h1>Make a court</h1>
+        <p>
+          If you have a court that you want to share with others, you can easily
+          add it to our platform.
+        </p>
+        <button>Make a court</button>
+
+      </section> -->
     </main>
     <footer></footer>
     <script type="module" src="/anim.js"></script>
