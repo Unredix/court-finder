@@ -1,0 +1,44 @@
+:root {
+  --font-family: Arial, sans-serif;
+  --font-size: 16px;
+  --line-height: 1.5;
+  --color-primary: #3387eb;
+  --color-secondary: #2ecc71;
+  --color-background: #01071f;
+  --color-text: #ffffff;
+  --color-border: #1a4f73;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  height: 300vh;
+}
+
+header {
+  display: flex;
+  height: 10svh;
+  font-size: 1.2em;
+}
+
+header nav img {
+  height: 100%;
+  width: auto;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+header nav ul li {
+  margin: 0 15px;
+}
+header nav ul li a {
+  color: var(--color-text);
+  text-decoration: none;
+}
