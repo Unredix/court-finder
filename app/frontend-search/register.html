@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Court Finder - Register</title>
+    <link rel="stylesheet" href="/styles/search.css" />
+    <link rel="stylesheet" href="/styles/register.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="main-nav">
+        <ul>
+          <li>
+            <img src="/assets/imgs/logo.png" alt="" />
+          </li>
+        </ul>
+      </nav>
+      <nav class="user-nav">
+        <ul>
+          <li class="lang-select">
+            <select name="" id="">
+              <option value="hu">🇭🇺</option>
+              <option value="en">🇬🇧</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="register">
+        <h1>Register</h1>
+        <form id="register-form">
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            required
+            autocomplete="username"
+          />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            autocomplete="email"
+          />
+
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            autocomplete="new-password"
+          />
+
+          <label for="confirm-password">Confirm Password:</label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            required
+            autocomplete="new-password"
+          />
+
+          <button type="submit">Register</button>
+          <div class="login-link">
+            <p>Already have an account? <a href="/login">Login here</a></p>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script>
+      document
+        .getElementById("register-form")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const username = e.target.username.value;
+          const email = e.target.email.value;
+          const password = e.target.password.value;
+          const confirmPassword = e.target["confirm-password"].value;
+
+          if (password !== confirmPassword) {
+            alert("Passwords do not match");
+            return;
+          }
+
+          const res = await fetch("http://localhost:3000/api/users/register", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username, email, password }),
+          });
+          const data = await res.json();
+          if (res.ok) {
+            window.location.href = "/login"; // Redirect to login page after successful registration
+            alert("Registration successful!");
+          } else {
+            alert(data.message || "Registration failed");
+          }
+        });
+    </script>
+  </body>
+</html>

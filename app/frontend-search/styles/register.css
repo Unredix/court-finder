@@ -1,0 +1,48 @@
+.register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+}
+
+.register h1 {
+  margin-bottom: 20px;
+}
+
+.register form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.register label {
+  margin-bottom: 5px;
+}
+
+.register input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+}
+
+.register input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+  margin: 0;
+}
+
+.register button {
+  padding: 10px;
+  background-color: var(--color-bbackground);
+  color: var(--color-text);
+  border: 1px solid var(--color-primary);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register button:hover {
+  background-color: var(--color-primary);
+}

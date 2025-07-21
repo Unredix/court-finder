@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Court Finder - Login</title>
+    <link rel="stylesheet" href="/styles/search.css" />
+    <link rel="stylesheet" href="/styles/login.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="main-nav">
+        <ul>
+          <li>
+            <img src="/assets/imgs/logo.png" alt="" />
+          </li>
+        </ul>
+      </nav>
+      <nav class="user-nav">
+        <ul>
+          <li class="lang-select">
+            <select name="" id="">
+              <option value="hu">🇭🇺</option>
+              <option value="en">🇬🇧</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="login">
+        <h1>Login</h1>
+        <form id="login-form">
+          <label for="email">Email:</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            required
+            autocomplete="email"
+          />
+
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            autocomplete="current-password"
+          />
+          <label for="remember-me">
+            <input type="checkbox" id="remember-me" name="remember-me" />
+            Remember me
+          </label>
+          <div class="forgot-password">
+            <a href="/forgot-password">Forgot Password?</a>
+          </div>
+          <button type="submit">Login</button>
+          <div class="register-link">
+            <p>Don't have an account? <a href="/register">Register here</a></p>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script>
+      if (localStorage.getItem("token")) {
+        alert("You are already logged in!");
+        window.location.href = "/search.html";
+      }
+
+      document
+        .getElementById("login-form")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const email = e.target.email.value;
+          const password = e.target.password.value;
+          const res = await fetch("http://localhost:3000/api/users/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, password }),
+          });
+          const data = await res.json();
+          if (res.ok) {
+            if (document.getElementById("remember-me").checked) {
+              localStorage.setItem("token", data.token); // Save the JWT
+            } else {
+              sessionStorage.setItem("token", data.token); // Save for session only
+            }
+            window.location.href = "/search.html"; // Redirect to home page
+            alert("Login successful!");
+          } else {
+            alert(data.message || "Login failed");
+          }
+        });
+    </script>
+  </body>
+</html>
