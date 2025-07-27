@@ -23,11 +23,14 @@
       </nav>
       <nav class="user-nav">
         <ul>
-          <li class="anim-link">
+          <li id="login-link">
             <a href="/login">Login</a>
           </li>
-          <li class="anim-link">
+          <li id="register-link">
             <a href="/register">Register</a>
+          </li>
+          <li id="user" style="display: none">
+            <a href="/user" id="user-link"></a>
           </li>
           <li class="lang-select">
             <select name="" id="">
@@ -38,6 +41,103 @@
         </ul>
       </nav>
     </header>
+    <nav class="filter-nav">
+      <div class="filter-option">
+        <label for="court-type">Court Type:</label>
+        <select name="court-type" id="court-type">
+          <option value="all">All</option>
+          <option value="Tennis">Tennis</option>
+          <option value="Basketball">Basketball</option>
+          <option value="Badminton">Badminton</option>
+        </select>
+      </div>
+      <div class="filter-option">
+        <label for="location">Location:</label>
+        <input type="text" id="location" placeholder="Enter location" />
+      </div>
+      <div class="filter-option">
+        <label for="num-courts">Number of Courts:</label>
+        <select name="num-courts" id="num-courts">
+          <option value="all">All</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="more">6+</option>
+        </select>
+      </div>
+
+      <div class="filter-option">
+        <label for="price-range">Price Range:</label>
+        <select name="price-range" id="price-range">
+          <option value="all">All</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+      </div>
+      <div class="filter-option">
+        <label for="cover">Cover:</label>
+        <select name="cover" id="cover">
+          <option value="all">All</option>
+          <option value="indoor">Indoor</option>
+          <option value="outdoor">Outdoor</option>
+        </select>
+      </div>
+      <div class="filter-option">
+        <label for="surface">Surface:</label>
+        <select name="surface" id="surface">
+          <option value="all">All</option>
+          <option value="clay">Clay</option>
+          <option value="grass">Grass</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+      <div class="filter-option">
+        <label for="lighting">Lighting:</label>
+        <select name="lighting" id="lighting">
+          <option value="all">All</option>
+          <option value="natural">Natural</option>
+          <option value="artificial">Artificial</option>
+        </select>
+      </div>
+      <div class="filter-option">
+        <label for="rating">Rating:</label>
+        <select name="rating" id="rating">
+          <option value="all">All</option>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+      </div>
+      <div class="filter-option">
+        <label for="accessibility">Accessibility:</label>
+        <select name="accessibility" id="accessibility">
+          <option value="all">All</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+      <div class="filter-option">
+        <label for="features">Features:</label>
+        <input type="checkbox" name="features" id="wifi" value="wifi" />
+        <input type="checkbox" name="features" id="restroom" value="restroom" />
+        <input
+          type="checkbox"
+          name="features"
+          id="changing-room"
+          value="changing-room"
+        />
+        <input type="checkbox" name="features" id="heating" value="heating" />
+        <input type="checkbox" name="features" id="cooling" value="cooling" />
+        <input type="checkbox" name="features" id="parking" value="parking" />
+        <input type="checkbox" name="features" id="locker" value="locker" />
+        <input type="checkbox" name="features" id="shower" value="shower" />
+        <input type="checkbox" name="features" id="cafe" value="cafe" />
+        <input type="checkbox" name="features" id="pro-shop" value="pro-shop" />
+      </div>
+    </nav>
     <main>
       <button id="delete-token">Delete token</button>
     </main>

@@ -10,6 +10,35 @@ const registerUser = async (req, res) => {
     if (!username || !email || !password) {
       return res.status(400).json({ message: "All fields are required" });
     }
+    if (password.length < 6) {
+      return res
+        .status(400)
+        .json({ message: "Password must be at least 6 characters" });
+    }
+    if (username.length < 3) {
+      return res
+        .status(400)
+        .json({ message: "Username must be at least 3 characters" });
+    }
+    if (username.length > 20) {
+      return res
+        .status(400)
+        .json({ message: "Username must be at most 20 characters" });
+    }
+    if (!/^[a-zA-Z0-9_]+$/.test(username)) {
+      return res.status(400).json({
+        message: "Username can only contain letters, numbers, and underscores",
+      });
+    }
+    if (email.length < 5) {
+      return res
+        .status(400)
+        .json({ message: "Email must be at least 5 characters" });
+    }
+    if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
+      return res.status(400).json({ message: "Email must be valid" });
+    }
+
     const existingUser = await User.findOne({ email });
     if (existingUser) {
       return res.status(400).json({ message: "User already exists" });
