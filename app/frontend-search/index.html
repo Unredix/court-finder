@@ -41,106 +41,303 @@
         </ul>
       </nav>
     </header>
-    <nav class="filter-nav">
-      <div class="filter-option">
-        <label for="court-type">Court Type:</label>
-        <select name="court-type" id="court-type">
-          <option value="all">All</option>
-          <option value="Tennis">Tennis</option>
-          <option value="Basketball">Basketball</option>
-          <option value="Badminton">Badminton</option>
-        </select>
-      </div>
-      <div class="filter-option">
-        <label for="location">Location:</label>
-        <input type="text" id="location" placeholder="Enter location" />
-      </div>
-      <div class="filter-option">
-        <label for="num-courts">Number of Courts:</label>
-        <select name="num-courts" id="num-courts">
-          <option value="all">All</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="more">6+</option>
-        </select>
-      </div>
+    <div class="content">
+      <nav class="filter-nav">
+        <div class="filter-option">
+          <label for="court-type">Court Type:</label>
+          <select name="court-type" id="court-type">
+            <option value="all">All</option>
+            <option value="Tennis">Tennis</option>
+            <option value="Basketball">Basketball</option>
+            <option value="Badminton">Badminton</option>
+            <option value="Squash">Squash</option>
+            <option value="Volleyball">Volleyball</option>
+            <option value="Padel">Padel</option>
+          </select>
+        </div>
+        <div class="filter-option">
+          <label for="location">Location:</label>
+          <input type="text" id="location" placeholder="Enter location" />
+        </div>
+        <div class="filter-option">
+          <label for="num-courts">Number of Courts:</label>
+          <select name="num-courts" id="num-courts">
+            <option value="all">All</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="more">6+</option>
+          </select>
+        </div>
 
-      <div class="filter-option">
-        <label for="price-range">Price Range:</label>
-        <select name="price-range" id="price-range">
-          <option value="all">All</option>
-          <option value="low">Low</option>
-          <option value="medium">Medium</option>
-          <option value="high">High</option>
-        </select>
-      </div>
-      <div class="filter-option">
-        <label for="cover">Cover:</label>
-        <select name="cover" id="cover">
-          <option value="all">All</option>
-          <option value="indoor">Indoor</option>
-          <option value="outdoor">Outdoor</option>
-        </select>
-      </div>
-      <div class="filter-option">
-        <label for="surface">Surface:</label>
-        <select name="surface" id="surface">
-          <option value="all">All</option>
-          <option value="clay">Clay</option>
-          <option value="grass">Grass</option>
-          <option value="hard">Hard</option>
-        </select>
-      </div>
-      <div class="filter-option">
-        <label for="lighting">Lighting:</label>
-        <select name="lighting" id="lighting">
-          <option value="all">All</option>
-          <option value="natural">Natural</option>
-          <option value="artificial">Artificial</option>
-        </select>
-      </div>
-      <div class="filter-option">
-        <label for="rating">Rating:</label>
-        <select name="rating" id="rating">
-          <option value="all">All</option>
-          <option value="high">High</option>
-          <option value="medium">Medium</option>
-          <option value="low">Low</option>
-        </select>
-      </div>
-      <div class="filter-option">
-        <label for="accessibility">Accessibility:</label>
-        <select name="accessibility" id="accessibility">
-          <option value="all">All</option>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-        </select>
-      </div>
-      <div class="filter-option">
-        <label for="features">Features:</label>
-        <input type="checkbox" name="features" id="wifi" value="wifi" />
-        <input type="checkbox" name="features" id="restroom" value="restroom" />
-        <input
-          type="checkbox"
-          name="features"
-          id="changing-room"
-          value="changing-room"
-        />
-        <input type="checkbox" name="features" id="heating" value="heating" />
-        <input type="checkbox" name="features" id="cooling" value="cooling" />
-        <input type="checkbox" name="features" id="parking" value="parking" />
-        <input type="checkbox" name="features" id="locker" value="locker" />
-        <input type="checkbox" name="features" id="shower" value="shower" />
-        <input type="checkbox" name="features" id="cafe" value="cafe" />
-        <input type="checkbox" name="features" id="pro-shop" value="pro-shop" />
-      </div>
-    </nav>
-    <main>
-      <button id="delete-token">Delete token</button>
-    </main>
+        <div class="filter-option">
+          <label for="price-range">Price Range:</label>
+          <select name="price-range" id="price-range">
+            <option value="all">All</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+        </div>
+        <div class="filter-option">
+          <label for="booking">Booking:</label>
+          <select name="booking" id="booking">
+            <option value="all">All</option>
+            <option value="online">Online Booking</option>
+            <option value="phone">Phone Booking</option>
+            <option value="walk-in">Walk-in Only</option>
+          </select>
+        </div>
+        <div class="filter-option">
+          <label for="cover">Cover:</label>
+          <select name="cover" id="cover">
+            <option value="all">All</option>
+            <option value="indoor">Indoor</option>
+            <option value="outdoor">Outdoor</option>
+          </select>
+        </div>
+        <div class="filter-option">
+          <label for="surface">Surface:</label>
+          <select name="surface" id="surface">
+            <option value="all">All</option>
+            <option value="clay">Clay</option>
+            <option value="grass">Grass</option>
+            <option value="hard">Hard</option>
+            <option value="carpet">Carpet</option>
+            <option value="wood">Wood</option>
+          </select>
+        </div>
+        <div class="filter-option">
+          <label for="lighting">Lighting:</label>
+          <select name="lighting" id="lighting">
+            <option value="all">All</option>
+            <option value="natural">Natural</option>
+            <option value="artificial">Artificial</option>
+          </select>
+        </div>
+        <div class="filter-option">
+          <label for="rating">Rating:</label>
+          <select name="rating" id="rating">
+            <option value="all">All</option>
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+          </select>
+        </div>
+        <div class="filter-option">
+          <label for="equipment">Equipment:</label>
+          <select name="equipment" id="equipment">
+            <option value="all">All</option>
+            <option value="Rent">Available for Rent</option>
+            <option value="Free">Free</option>
+            <option value="No">Not Available</option>
+          </select>
+        </div>
+        <div class="filter-option">
+          <label for="accessibility">Accessibility:</label>
+          <select name="accessibility" id="accessibility">
+            <option value="all">All</option>
+            <option value="wheelchair">Wheelchair Accessible</option>
+            <option value="no-wheelchair">Not Wheelchair Accessible</option>
+            <option value="limited">Limited Accessibility</option>
+            <option value="none">No Accessibility Features</option>
+          </select>
+        </div>
+        <div class="filter-option">
+          <label for="features">Features:</label>
+          <label class="features-item">
+            <input type="checkbox" name="features" id="wifi" value="wifi" />
+            <img
+              src="./assets/svgs/router-wifi.svg"
+              alt="WiFi"
+              class="checkbox-icon"
+            />
+          </label>
+          <label class="features-item">
+            <input
+              type="checkbox"
+              name="features"
+              id="restroom"
+              value="restroom"
+            />
+            <img
+              src="./assets/svgs/restroom.svg"
+              alt="Restroom"
+              class="checkbox-icon"
+            />
+          </label>
+
+          <label class="features-item">
+            <input
+              type="checkbox"
+              name="features"
+              id="locker-room"
+              value="locker-room"
+            />
+            <img
+              src="./assets/svgs/lockers.svg"
+              alt="locker-room"
+              class="checkbox-icon"
+            />
+          </label>
+          <label class="features-item">
+            <input
+              type="checkbox"
+              name="features"
+              id="air-conditioning"
+              value="air-conditioning"
+            />
+            <img
+              src="assets/svgs/air-conditioner.svg"
+              alt="Air Conditioning"
+              class="checkbox-icon"
+            />
+          </label>
+          <label class="features-item">
+            <input
+              type="checkbox"
+              name="features"
+              id="parking"
+              value="parking"
+            />
+            <img
+              src="assets/svgs/parking-circle.svg"
+              alt="Parking"
+              class="checkbox-icon"
+            />
+          </label>
+          <label class="features-item">
+            <input type="checkbox" name="features" id="shower" value="shower" />
+            <img
+              src="assets/svgs/shower.svg"
+              alt="Shower"
+              class="checkbox-icon"
+            />
+          </label>
+          <label class="features-item">
+            <input type="checkbox" name="features" id="cafe" value="cafe" />
+            <img
+              src="assets/svgs/coffee-beans.svg"
+              alt="Cafe"
+              class="checkbox-icon"
+            />
+          </label>
+          <label class="features-item">
+            <input
+              type="checkbox"
+              name="features"
+              id="pro-shop"
+              value="pro-shop"
+            />
+            <img
+              src="assets/svgs/shop.svg"
+              alt="Pro Shop"
+              class="checkbox-icon"
+            />
+          </label>
+        </div>
+      </nav>
+      <main>
+        <button id="delete-token">Delete token</button>
+        <div class="search-bar">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search for courts, locations, or features..."
+          />
+          <button id="search-button">Search</button>
+        </div>
+        <h2>Search Results</h2>
+        <div class="results">
+          <div class="court-card">
+            <img src="/assets/imgs/court.png" alt="Court Image" />
+            <h3>Court Name</h3>
+            <p>Location: City, Country</p>
+            <p>Court Type: Tennis</p>
+            <p>Number of Courts: 4</p>
+            <p>Price Range: Medium</p>
+            <p>Rating: ★★★★☆</p>
+            <button class="view-details">View Details</button>
+          </div>
+          <!-- More court cards can be added here -->
+          <div class="court-card">
+            <img src="/assets/imgs/court.png" alt="Court Image" />
+            <h3>Court Name</h3>
+            <p>Location: City, Country</p>
+            <p>Court Type: Tennis</p>
+            <p>Number of Courts: 4</p>
+            <p>Price Range: Medium</p>
+            <p>Rating: ★★★★☆</p>
+            <button class="view-details">View Details</button>
+          </div>
+          <div class="court-card">
+            <img src="/assets/imgs/court.png" alt="Court Image" />
+            <h3>Court Name</h3>
+            <p>Location: City, Country</p>
+            <p>Court Type: Tennis</p>
+            <p>Number of Courts: 4</p>
+            <p>Price Range: Medium</p>
+            <p>Rating: ★★★★☆</p>
+            <button class="view-details">View Details</button>
+          </div>
+          <div class="court-card">
+            <img src="/assets/imgs/court.png" alt="Court Image" />
+            <h3>Court Name</h3>
+            <p>Location: City, Country</p>
+            <p>Court Type: Tennis</p>
+            <p>Number of Courts: 4</p>
+            <p>Price Range: Medium</p>
+            <p>Rating: ★★★★☆</p>
+            <button class="view-details">View Details</button>
+          </div>
+        </div>
+        <div class="results">
+          <div class="court-card">
+            <img src="/assets/imgs/court.png" alt="Court Image" />
+            <h3>Court Name</h3>
+            <p>Location: City, Country</p>
+            <p>Court Type: Tennis</p>
+            <p>Number of Courts: 4</p>
+            <p>Price Range: Medium</p>
+            <p>Rating: ★★★★☆</p>
+            <button class="view-details">View Details</button>
+          </div>
+          <!-- More court cards can be added here -->
+          <div class="court-card">
+            <img src="/assets/imgs/court.png" alt="Court Image" />
+            <h3>Court Name</h3>
+            <p>Location: City, Country</p>
+            <p>Court Type: Tennis</p>
+            <p>Number of Courts: 4</p>
+            <p>Price Range: Medium</p>
+            <p>Rating: ★★★★☆</p>
+            <button class="view-details">View Details</button>
+          </div>
+          <div class="court-card">
+            <img src="/assets/imgs/court.png" alt="Court Image" />
+            <h3>Court Name</h3>
+            <p>Location: City, Country</p>
+            <p>Court Type: Tennis</p>
+            <p>Number of Courts: 4</p>
+            <p>Price Range: Medium</p>
+            <p>Rating: ★★★★☆</p>
+            <button class="view-details">View Details</button>
+          </div>
+          <div class="court-card">
+            <img src="/assets/imgs/court.png" alt="Court Image" />
+            <h3>Court Name</h3>
+            <p>Location: City, Country</p>
+            <p>Court Type: Tennis</p>
+            <p>Number of Courts: 4</p>
+            <p>Price Range: Medium</p>
+            <p>Rating: ★★★★☆</p>
+            <button class="view-details">View Details</button>
+          </div>
+        </div>
+      </main>
+    </div>
     <script src="/scripts/index.js"></script>
   </body>
 </html>
